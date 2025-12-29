@@ -41,7 +41,7 @@ artifacts/tmp/
 artifacts/cache/
 
 # Best model weights (keep best_model_info.json)
-artifacts/modesl/best/**
+artifacts/models/best/**
 !arifacts/models/best/**/best_model_info.json
 
 # =========================
