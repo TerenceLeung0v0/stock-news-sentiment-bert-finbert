@@ -1,0 +1,7 @@
+{
+    "best_model_checkpoint": "/home/tl/stock-news-sentiment-bert-finbert/artifacts/models/tuning/finbert/checkpoint-293",
+    "best_metric": 0.7751226453612198,
+    "metric_for_best_model": "macro_f1",
+    "global_step": 1465,
+    "model_key": "finbert"
+}

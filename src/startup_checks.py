@@ -1,4 +1,4 @@
-from typing import Iterable, Union
+from typing import Iterable
 from pathlib import Path
 from config import REQUIRED_DIRS, BERT_KEY, FINBERT_KEY
 from project_types import ModelKey, MetricSplit, EvalSplit
@@ -10,7 +10,7 @@ from artifacts_utils import (
     get_final_model_selection_path
 )
 
-def ensure_required_dirs(dirs: Iterable[Union[str, Path]]) -> None:
+def ensure_required_dirs(dirs: Iterable[str | Path]) -> None:
     """
     Ensure required directories exist:
     """
