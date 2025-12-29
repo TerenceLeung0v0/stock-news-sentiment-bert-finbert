@@ -1,0 +1,57 @@
+# =========================
+#  Python general
+# =========================
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# =========================
+#  Environments
+# =========================
+.venv/
+env/
+venv/
+*.env
+*.venv
+.DS_Store
+
+# =========================
+#  Jupyter & VSCode
+# =========================
+.ipynb_checkpoints/
+.vscode/
+*.code-workspace
+
+# =========================
+#  Data & Artifacts
+# =========================
+# raw and processed data (large files)
+data/raw/*.zip
+data/raw/*.7z
+data/raw/*.rar
+data/raw/*.tar.gz
+
+# intermediate or regenerated artifacts
+artifacts/models/checkpoints/
+artifacts/models/tuning/
+artifacts/results/*.tmp
+artifacts/tmp/
+artifacts/cache/
+
+# =========================
+#  System cache / temp
+# =========================
+*.tmp
+*.bak
+*.swp
+Thumbs.db
+.pytest_cache/
+
+# =========================
+#  Others (safe to ignore)
+# =========================
+# Kaggle / Colab / logs
+kaggle.json
+logs/

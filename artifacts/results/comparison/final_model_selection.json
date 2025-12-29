@@ -1,0 +1,87 @@
+{
+    "selected_model": {
+        "model_key": "finbert",
+        "model_id": "ProsusAI/finbert"
+    },
+    "selection_criteria": {
+        "primary_metric": "macro_f1",
+        "split": "val",
+        "decision_rule": "max",
+        "implicit_decision_rule": {
+            "type": "prefer_model",
+            "model_key": "bert-base",
+            "when": "score_tie"
+        }
+    },
+    "scores": {
+        "bert-base": {
+            "val": {
+                "macro_f1": 0.7415754421031572,
+                "weighted_f1": 0.7975689752727669
+            },
+            "test": {
+                "macro_f1": 0.7521942203266261,
+                "weighted_f1": 0.8079636171969878
+            }
+        },
+        "finbert": {
+            "val": {
+                "macro_f1": 0.7751226453612198,
+                "weighted_f1": 0.8142125444355713
+            },
+            "test": {
+                "macro_f1": 0.7675000443474712,
+                "weighted_f1": 0.8122094310469596
+            }
+        }
+    },
+    "environment": {
+        "tokenization_config": {
+            "baseline_max_length": 96,
+            "max_length": 96,
+            "padding": "max_length",
+            "truncation": true,
+            "selection_method": "truncation_efficiency_tradeoff",
+            "truncation_threshold_pct": 1.0
+        },
+        "bert-base": {
+            "label_order": [
+                "negative",
+                "neutral",
+                "positive"
+            ],
+            "label_to_id": {
+                "negative": 0,
+                "neutral": 1,
+                "positive": 2
+            },
+            "id_to_label": {
+                "0": "negative",
+                "1": "neutral",
+                "2": "positive"
+            }
+        },
+        "finbert": {
+            "label_order": [
+                "negative",
+                "neutral",
+                "positive"
+            ],
+            "label_to_id": {
+                "negative": 0,
+                "neutral": 1,
+                "positive": 2
+            },
+            "id_to_label": {
+                "0": "negative",
+                "1": "neutral",
+                "2": "positive"
+            }
+        }
+    },
+    "metadata": {
+        "created_at": "2025-12-29T15:59:40.415005",
+        "pipeline_stage": "model_selection"
+    },
+    "notes": "Final model selected based on validation macro F1-score"
+}

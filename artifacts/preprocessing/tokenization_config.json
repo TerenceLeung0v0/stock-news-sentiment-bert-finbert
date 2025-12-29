@@ -1,0 +1,8 @@
+{
+    "baseline_max_length": 96,
+    "max_length": 96,
+    "padding": "max_length",
+    "truncation": true,
+    "selection_method": "truncation_efficiency_tradeoff",
+    "truncation_threshold_pct": 1.0
+}
