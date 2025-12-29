@@ -1,4 +1,4 @@
-from typing import Any, Optional
+from typing import Any
 from project_types import ModelKey, EvalSplit
 from artifacts_utils import (
     load_label_map_for_model, load_tokenization_config,
@@ -62,7 +62,7 @@ def load_model_artifacts(model_key: ModelKey) -> dict[str, Any]:
 def build_metrics_comparison_table(
     model_artifacts_map: dict[ModelKey, dict[str, Any]],
     split: EvalSplit,
-    metric_keys: Optional[list[str]]=None
+    metric_keys: list[str] | None=None
 ) -> pd.DataFrame:
     """
     Build a comparison table across models for a given split.
